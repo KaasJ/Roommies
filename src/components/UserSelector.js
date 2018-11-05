@@ -9,8 +9,8 @@ export default function UserSelector() {
       <h1>Hello! Welcome to <strong>ROOMMIES</strong></h1>
       
     <div className="Buttons">
-     <div className="Button1"> <button> <Link to={`/lookingforaroommie/`}>Looking for a roommie!</Link> </button></div>
-    <div classname="Button2"><button><Link to={`/offeringaroommie/`}>Offering a roommie!</Link></button></div>
+     <div className="Button1"><Link to={`/lookingforaroommie/`}> <button> Looking for a roommie! </button></Link></div>
+    <div classname="Button2"><Link to={`/offeringaroommie/`}> <button>Offering a roommie!</button></Link></div>
     </div>
     </div>
     )
