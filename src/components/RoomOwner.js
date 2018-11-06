@@ -1,19 +1,20 @@
 import * as React from 'react'
-import {connect} from 'react-redux';
-import {addTenat} from '../actions/addtenat'
+import { connect } from 'react-redux';
+import { addOwner } from '../actions/addowner'
 
 
-const locations = ['Amsterdam', 'Roterdam', 'The Hague', 'Haarlem', 'Utrecht']; 
-const prices = ['under 400 EUR', '400-500 EUR', '500-600 EUR', '600-700 EUR', '700-800 EUR', 'above 800 EUR' ];
+const locations = ['Amsterdam', 'Roterdam', 'The Hague', 'Haarlem', 'Utrecht'];
+const prices = ['under 400 EUR', '400-500 EUR', '500-600 EUR', '600-700 EUR', '700-800 EUR', 'above 800 EUR'];
 
 
-class TenantPrefernces extends React.Component {
+class RoomOwner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   };
 
 
@@ -27,11 +28,12 @@ class TenantPrefernces extends React.Component {
   }
 
   handleSubmit = (event) => {
+    console.log('hi')
     event.preventDefault();
-    this.props.addTenat(this.state);
+    this.props.addOwner(this.state);
   }
 
-  render () {
+  render() {
     return (<div>
       <h1>Fill your preferences</h1>
       <form onSubmit={this.handleSubmit}>
@@ -53,32 +55,31 @@ class TenantPrefernces extends React.Component {
           </li>
           <li>Gender:</li>
           <li>
-            <input type='radio' name='gender' value='Female' id='female' onChange={this.handleInputChange}/><label htmlFor='female'>Female</label>&nbsp;
-            <input type='radio' name='gender' value='Male' id='male' onChange={this.handleInputChange}/><label htmlFor='male'>Male</label>&nbsp;
-            <input type='radio' name='gender' value='Any' id='any' onChange={this.handleInputChange}/><label htmlFor='any'>Any</label>&nbsp;
+            <input type='radio' name='gender' value='Female' id='female' onChange={this.handleInputChange} /><label htmlFor='female'>Female</label>&nbsp;
+            <input type='radio' name='gender' value='Male' id='male' onChange={this.handleInputChange} /><label htmlFor='male'>Male</label>&nbsp;
           </li>
           <li>Smoking:</li>
           <li>
-            <input type='radio' name='smoking' value='Yes' id='smokingYes' onChange={this.handleInputChange}/><label htmlFor='smokingYes'>Yes</label>&nbsp;
-            <input type='radio' name='smoking' value='No' id='smokingNo' onChange={this.handleInputChange}/><label htmlFor='smokingNo'>No</label>&nbsp;
+            <input type='radio' name='smoking' value='Yes' id='smokingYes' onChange={this.handleInputChange} /><label htmlFor='smokingYes'>Yes</label>&nbsp;
+            <input type='radio' name='smoking' value='No' id='smokingNo' onChange={this.handleInputChange} /><label htmlFor='smokingNo'>No</label>&nbsp;
           </li>
           <li>Pets:</li>
           <li>
-            <input type='radio' name='pets' value='Yes' id='petsYes' onChange={this.handleInputChange}/><label htmlFor='petsYes'>Yes</label>&nbsp;
-            <input type='radio' name='pets' value='No' id='petsNo' onChange={this.handleInputChange}/><label htmlFor='petsNo'>No</label>&nbsp;
+            <input type='radio' name='pets' value='Yes' id='petsYes' onChange={this.handleInputChange} /><label htmlFor='petsYes'>Yes</label>&nbsp;
+            <input type='radio' name='pets' value='No' id='petsNo' onChange={this.handleInputChange} /><label htmlFor='petsNo'>No</label>&nbsp;
           </li>
-        </ul> 
+        </ul>
         <button type='submit'>Submit</button>
       </form>
-        
+
     </div>)
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    tenats: state.tenats
+    owners: state.owners
   }
 }
 
-export default connect(mapStateToProps, {addTenat})(TenantPrefernces)
+export default connect(mapStateToProps, { addOwner })(RoomOwner)
