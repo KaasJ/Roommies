@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-//import x from './x'
+import  tenantPreferences from './tenantpreferences'
 
 
 export default combineReducers({
-  
+  tenantPreferences,
 })
