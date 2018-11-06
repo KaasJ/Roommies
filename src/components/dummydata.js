@@ -1,71 +1,93 @@
-const lookingRoom = [{
-    header: 'Looking for a sporty guy to share a house'
-    description: "Hi I'm willem and I'm looking for a new place where i can share my passion for sports"
-    location: Amsterdam
-    starting date: 12 - 2018
-    gender: "male"
-    smoking: true
-  },
-  {
-    header: 'Looking for a GAMER to share a house'
-    description: "Hi I'm Frits and I'm looking for a new place where i can share my passion for fishing"
-    location: Amsterdam
-    starting date: 12 - 2018
-    gender: "male"
-    smoking: true
-  },
-  {
-    header: 'Looking for a friend and house'
-    description: "Hi I'm Piet and I'm looking for a new place where i can share my passion for sports"
-    location: Amsterdam
-    starting date: 12 - 2018
-    gender: "male"
-    smoking: true
-  },
-  {
-    header: 'Please pick me Im desperate'
-    description: "Hi I'm Kees and I'm looking for a new place where i can share my passion for sports"
-    location: Amsterdam
-    starting date: 12 - 2018
-    gender: "male"
-    smoking: true
-  },
+export const lookingRoom = [{
+  gender: 'Male',
+  startingDate: "2018-11-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '400-500 EUR',
+  location: 'Amsterdam',
+  description: 'Hi, my name is Slava. I am 22 years old. I am looking for a room. I like sport'
+},
+{
+  gender: 'Male',
+  startingDate: "2018-11-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '400-500 EUR',
+  location: 'Amsterdam',
+  description: 'Hi, my name is Petr. I am 22 years old. I am looking for a room. I like sport'
+},
+{
+  gender: 'Male',
+  startingDate: "2018-11-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '400-500 EUR',
+  location: 'Amsterdam',
+  description: 'Hi, my name is Stepan. I am 22 years old. I am looking for a room. I like sport'
+},
+{
+  gender: 'Female',
+  startingDate: "2018-11-09",
+  pets: 'Yes',
+  smoking: 'No',
+  price: '500-600 EUR',
+  location: 'Amsterdam',
+  description: 'Hi, my name is Sveta. I am 22 years old. I am looking for a room. I like sport'
+},
+{
+  gender: 'Male',
+  startingDate: "2018-06-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '700-800 EUR',
+  location: 'Amsterdam',
+  description: 'Hi, my name is Viktor. I am 22 years old. I am looking for a room. I like sport'
+},
+{
+  gender: 'Female',
+  startingDate: "2018-01-08",
+  pets: 'No',
+  smoking: 'No',
+  price: '400-500 EUR',
+  location: 'Amsterdam',
+  description: 'Hi, my name is Vika. I am 22 years old. I am looking for a room. I like sport'
+}
 ]
 
 
 
 
 
-const offerRoom = [{
-    header: 'Double room in Baarsjes',
-    description: 'Hi. My name is Willem and I have a double room available in the Baarsjes in Amsterdam',
-    location: 'Amsterdam',
-    starting date: 11 - 2018,
-    gender: 'male',
-    smoking: true,
-  },
-  {
-    header: 'Double room in Amsterdam West',
-    description: 'Hi. My name is Arie and I have a double room available in Amsterdam West',
-    location: 'Amsterdam',
-    starting date: 11 - 2018,
-    gender: 'male',
-    smoking: true,
-  },
-  {
-    header: 'Big Room in Amsterdam Oost',
-    description: 'Hi. My name is Henk and I have a double room available in Amsterdam Oost',
-    location: 'Amsterdam',
-    starting date: 11 - 2018,
-    gender: 'male',
-    smoking: true,
-  },
-  {
-    header: 'Appartment in the pijp',
-    description: 'Hi. My name is FreddieB and I have a double room available in de Pijp',
-    location: 'Amsterdam',
-    starting date: 11 - 2018,
-    gender: 'male',
-    smoking: true,
-  }
+export const offerRoom = [{
+  gender: 'male',
+  startingDate: "2018-11-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '400-500 EUR',
+  location: 'Amsterdam',
+},
+{
+  gender: 'Female',
+  startingDate: "2018-11-09",
+  pets: 'Yes',
+  smoking: 'No',
+  price: '500-600 EUR',
+  location: 'Amsterdam',
+},
+{
+  gender: 'male',
+  startingDate: "2018-12-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '700-800 EUR',
+  location: 'Amsterdam',
+},
+{
+  gender: 'Female',
+  startingDate: "2018-10-08",
+  pets: 'No',
+  smoking: 'No',
+  price: '400-500 EUR',
+  location: 'Amsterdam',
+}
 ]

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {connect} from 'react-redux';
 import {addTenat} from '../actions/addtenat'
+//import { offerRoom } from './dummydata';
 
 
 const locations = ['Amsterdam', 'Roterdam', 'The Hague', 'Haarlem', 'Utrecht']; 
@@ -11,6 +12,7 @@ class TenantPrefernces extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    console.log(this.state)
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,9 +29,21 @@ class TenantPrefernces extends React.Component {
   }
 
   handleSubmit = (event) => {
+    console.log('hi');
     event.preventDefault();
     this.props.addTenat(this.state);
+    // const findMatch = (tenant, rooms) => {
+    //   return rooms.filter(room => Object.keys(tenant).every(k => {
+    //     if (k === 'gender' && tenant[k] === 'Any') {
+    //       return true;
+    //     }
+    //     return tenant[k] === room[k];
+    //   }))
+    // }
+    // console.log(findMatch(this.state[0], offerRoom));
   }
+
+
 
   render () {
     return (<div>
