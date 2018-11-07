@@ -1,5 +1,6 @@
 const lookingRoom = [{
     header: 'Looking for a sporty guy to share a house'
+    price: 500
     description: "Hi I'm willem and I'm looking for a new place where i can share my passion for sports"
     location: Amsterdam
     starting date: 12 - 2018

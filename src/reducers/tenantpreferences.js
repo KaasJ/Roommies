@@ -1,12 +1,11 @@
-import {ADD_TENAT} from '../actions/addtenat';
+import {ADD_TENANT} from '../actions/addTenant';
 
 const initialState = [];
 
 const tenantPreferences = (state = initialState, action = {}) => {
   switch (action.type) {
-    case ADD_TENAT:
+    case ADD_TENANT:
       return [
-        ...state,
         action.payload
       ];
     default:
