@@ -2,6 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux';
 import { lookingRoom } from './dummydata';
 import OwnerRoomContainer from './OwnerRoomContainer';
+import { withRouter } from 'react-router'
 
 
 
@@ -62,12 +63,21 @@ class OwnerRoomMatchPage extends React.Component {
       "arrayDisplayed": newArray,
       "showFilter": !this.state.showFilter,
       "showFilterButton": !this.state.showFilterButton,
-      "showFilterButton": !this.state.showFilterButton,
       "indexItemDisplayed": newArray.length-1
     })
   }
 
   likeButton = () => {
+    if(this.state.indexItemDisplayed['wantToMatch']) {
+      this.props.history.push('/matchowner')
+    } else { 
+      if (this.state.indexItemDisplayed !== this.state.arrayDisplayed.length-1) {
+        this.setState({
+          "indexItemDisplayed": this.state.indexItemDisplayed+1
+        })} else {
+        this.setState ({'indexItemDisplayed': 0 })
+        }
+    }
     
   }
 
@@ -80,7 +90,7 @@ class OwnerRoomMatchPage extends React.Component {
         <h1>We found {this.state.arrayDisplayed.length} roommies for you!</h1>
         { this.state.showFilter && <OwnerRoomContainer setfilteredarray={this.setFilteredArray}/> }
         { this.state.showFilterButton && <button onClick={this.handleChange}>filter</button>}
-        { this.state.arrayDisplayed.length ? <img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']}></img> : <p>Sorry, we didn't find any results!</p>  }
+        { this.state.arrayDisplayed.length ? <img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} alt="123"></img> : <p>Sorry, we didn't find any results!</p>  }
         { this.state.arrayDisplayed.length ? <p>{this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p> : null}
         
         <button onclick={this.likeButton}>Like</button>
@@ -100,4 +110,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(OwnerRoomMatchPage)
+export default connect(mapStateToProps)(withRouter(OwnerRoomMatchPage))

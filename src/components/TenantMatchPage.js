@@ -12,7 +12,7 @@ class TenantMatchPage extends React.Component {
     showFilterButton: true,
     arrayDisplayed: [...offerRoom],
     indexItemDisplayed: [...offerRoom].length-1
-    }
+  }
 
 
   handleChange = () => {
@@ -26,9 +26,9 @@ class TenantMatchPage extends React.Component {
 
   nextButton = () => {
     if (this.state.indexItemDisplayed !== this.state.arrayDisplayed.length-1) {
-    this.setState({
-      "indexItemDisplayed": this.state.indexItemDisplayed+1
-    })} else {
+      this.setState({
+        "indexItemDisplayed": this.state.indexItemDisplayed+1
+      })} else {
       this.setState ({'indexItemDisplayed': 0 })
     }
 
@@ -37,9 +37,9 @@ class TenantMatchPage extends React.Component {
 
   previousButton = () => {
     if (this.state.indexItemDisplayed !== 0) {
-    this.setState({
-      "indexItemDisplayed": this.state.indexItemDisplayed-1
-    })}else {
+      this.setState({
+        "indexItemDisplayed": this.state.indexItemDisplayed-1
+      })}else {
       this.setState({'indexItemDisplayed': this.state.arrayDisplayed.length-1})
     }
   }
@@ -47,11 +47,11 @@ class TenantMatchPage extends React.Component {
 
   deleteButton = () => {
     if(this.state.arrayDisplayed.length > 0) {
-    const newArray = this.state.arrayDisplayed.filter((a, index)=> index !== this.state.indexItemDisplayed)
-    this.setState({
-    'arrayDisplayed': newArray,
-    'indexItemDisplayed': newArray.length-1
-    })}
+      const newArray = this.state.arrayDisplayed.filter((a, index)=> index !== this.state.indexItemDisplayed)
+      this.setState({
+        'arrayDisplayed': newArray,
+        'indexItemDisplayed': newArray.length-1
+      })}
 
   }
 
@@ -65,7 +65,6 @@ class TenantMatchPage extends React.Component {
       "arrayDisplayed": newArray,
       "showFilter": !this.state.showFilter,
       "showFilterButton": !this.state.showFilterButton,
-      "showFilterButton": !this.state.showFilterButton,
       "indexItemDisplayed": newArray.length-1
     })
   }
@@ -75,18 +74,18 @@ class TenantMatchPage extends React.Component {
 
    
     return(
-    <div>
+      <div>
     
-    <h1>We found {this.state.arrayDisplayed.length} room(s) for you!</h1>
-    { this.state.showFilter && <TenantContainer setfilteredarray={this.setFilteredArray}/> }
-    { this.state.showFilterButton && <button onClick={this.handleChange}>filter</button>}
-    { this.state.arrayDisplayed.length ? <img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']}></img> : <p>Sorry, we didn't find any results!</p>  }
-    { this.state.arrayDisplayed.length ? <p>{this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p> : null}
-    <button onClick={this.nextButton}>next</button>
-    <button>Like</button>
-    <button onClick={this.deleteButton}>Delete</button>
-    <button onClick={this.previousButton}>Previous</button>
-    </div>
+        <h1>We found {this.state.arrayDisplayed.length} room(s) for you!</h1>
+        { this.state.showFilter && <TenantContainer setfilteredarray={this.setFilteredArray}/> }
+        { this.state.showFilterButton && <button onClick={this.handleChange}>filter</button>}
+        { this.state.arrayDisplayed.length ? <img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} alt="123"></img> : <p>Sorry, we didn't find any results!</p>  }
+        { this.state.arrayDisplayed.length ? <p>{this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p> : null}
+        <button onClick={this.nextButton}>next</button>
+        <button>Like</button>
+        <button onClick={this.deleteButton}>Delete</button>
+        <button onClick={this.previousButton}>Previous</button>
+      </div>
     )
   }
 }

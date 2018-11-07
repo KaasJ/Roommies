@@ -1,0 +1,117 @@
+.body {
+  width: 375px;
+  height: 667px;
+  /* border: 1px solid #1f1e1e; */
+  position: relative;
+}
+
+footer {
+  width: 375px;
+  height: 120px;
+  background-color: rgba(54, 55, 50, 0.1);
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+header {
+  width: 378px;
+  height: 158.5px;
+  /* background-color: aqua; */
+  position: absolute;
+}
+
+.name {
+
+
+  flex-grow: 0;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+
+.background {
+  width: 385px;
+  height: 412px;
+  background-image: url("../images/Background image - homepage.png");
+  position: absolute;
+  top: 141px;
+}
+
+.menu {
+  width: 374px;
+  height: 226px;
+  background-color: rgba(54, 55, 50, 0.5);
+  /* opacity: .5; */
+  position: absolute;
+  top: 90px;
+}
+
+.greeting {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+}
+
+.button1 {
+  width: 300px;
+  height: 55px;
+  opacity: 1;
+  position: absolute;
+  left: 37px;
+  top: 60px;
+  font-size: 18px;
+  border-radius: 14px;
+  background-color: white;
+
+
+
+}
+
+.button2 {
+  width: 300px;
+  height: 55px;
+  position: absolute;
+  left: 37px;
+  top: 128px;
+  font-size: 18px;
+  border-radius: 14px;
+}
+
+h2 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: center;
+  color: rgba(54, 55, 50, 0.4);
+
+}
+
+h3 {
+  font-size: 13px;
+  position: absolute;
+  bottom: 0;
+  left: 170px;
+  color: rgba(54, 55, 50, 0.4);
+}
+
+.bar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+}
+
+.contact {
+  position: absolute;
+  left: 115px;
+  top: 49px;
+  width: 140.5px;
+  height: 32.04px;
+}
+
+.title {
+  text-align: center;
+
+}

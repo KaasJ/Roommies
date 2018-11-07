@@ -33,5 +33,4 @@ class TenantContainer extends React.Component {
 
 }
 
-
 export default connect(null, {addTenant})(withRouter(TenantContainer))

@@ -6,6 +6,8 @@ import { Route } from 'react-router-dom'
 import UserSelectorContainer from './components/UserSelectorContainer'
 import OwnerRoomMatchPage from './components/OwnerRoomMatchPage';
 import TenantMatchPage from './components/TenantMatchPage';
+import OwnerYouMatched from './components/OwnerYouMatched';
+import TenantYouMatched from './components/TenantYouMatched';
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
       <Route exact path="/lookingforaroommie" component={TenantMatchPage} /> 
       <Route exact path="/" component={UserSelectorContainer} />
       <Route exact path="/offeringaroommie" component={OwnerRoomMatchPage} />
+      {/* <Route exact path="/matchowner" component={OwnerYouMatched} />
+      <Route exact path="/matchtenant" component={TenantYouMatched} /> */}
       </div>
       </Provider>
     
