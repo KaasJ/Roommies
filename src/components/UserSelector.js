@@ -22,7 +22,7 @@ export default function UserSelector() {
         </div>
       </div>
     </div>
-    <footer classname="footer">
+    <footer className="footer">
       <h2>Connect whit us</h2>
       <div className="contact">
         {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>

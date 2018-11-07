@@ -20,7 +20,7 @@ class OwnerRoomContainer extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addOwner(this.state);
-    setTimeout(() => this.props.setfilteredarray(), 2000)
+    setTimeout(() => this.props.setfilteredarray(), 1500)
   }
 
   render() {

@@ -20,7 +20,7 @@ class TenantContainer extends React.Component {
   handleSubmit = (event) => {
       event.preventDefault();
       this.props.addTenant(this.state);
-      setTimeout(() => this.props.setfilteredarray(), 2000)  
+      setTimeout(() => this.props.setfilteredarray(), 1500)  
 }
 
   render() {

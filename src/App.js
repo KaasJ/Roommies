@@ -17,8 +17,8 @@ class App extends Component {
       <Route exact path="/lookingforaroommie" component={TenantMatchPage} /> 
       <Route exact path="/" component={UserSelectorContainer} />
       <Route exact path="/offeringaroommie" component={OwnerRoomMatchPage} />
-      {/* <Route exact path="/matchowner" component={OwnerYouMatched} />
-      <Route exact path="/matchtenant" component={TenantYouMatched} /> */}
+      <Route exact path="/matchowner" component={OwnerYouMatched} />
+      <Route exact path="/matchtenant" component={TenantYouMatched} /> 
       </div>
       </Provider>
     

@@ -7,7 +7,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Slava. I'm 32 years old. I'm looking for a room. I'd like sport",
   image: 'http://www.popstaronline.com/wp-content/uploads/2018/07/Game-of-Thrones-4-400x400.jpg',
-  wantToMatch: true
+  wantToMatch: false
 },
 {
   gender: 'Male',
@@ -18,7 +18,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Petr. I'm 30 years old. I am looking for a room. I'd like loud music and noisy companies",
   image: 'http://www.thelegendarytrend.com/wp-content/uploads/2016/02/LeonardoDiCaprio10-400x400.jpg',
-  wantToMatch: true
+  wantToMatch: false
 },
 {
   gender: 'Male',
@@ -40,7 +40,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Sveta. I'm 23 years old. I am looking for a room. I have a fluffy cat, that constantly sheeds",
   image: 'http://www.popstaronline.com/wp-content/uploads/2018/09/Kristen-Bell-Thumbnail-400x400.jpg',
-  wantToMatch: true
+  wantToMatch: false
 },
 {
   gender: 'Male',
@@ -62,7 +62,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Vika. I'm 37 years old. I'm looking for a room. I'd like reeding, cooking and knitting. I have alergy by cats.",
   image: 'https://www.thisblogrules.com/wp-content/uploads/2015/01/081308_adams_400x400.jpg',
-  wantToMatch: true
+  wantToMatch: false
 }
 ]
 
@@ -79,7 +79,7 @@ export const offerRoom = [{
   location: 'Amsterdam',
   description: "I'm loking for a roommate. In apartment has a fridge, washing machine and funny cat.",
   image: 'http://lousescartoun.com/wp-content/uploads/2017/06/Camera-Jusfine-38-400x400-c-default.jpg',
-  wantToMatch: true
+  wantToMatch: false
 },
 {
   gender: 'Female',
@@ -101,7 +101,7 @@ export const offerRoom = [{
   location: 'Amsterdam',
   description: "I'm loking for a roommate. Unfurnished but with a beautiful wiew ifrom the window",
   image: 'https://multimedia.3m.com/mws/media/1216793P/3m-window-film.jpg',
-  wantToMatch: true
+  wantToMatch: false
   
 },
 {
@@ -113,7 +113,7 @@ export const offerRoom = [{
   location: 'Amsterdam',
   description: "I'm loking for a roommate. Very cheap",
   image: 'http://www.vincenzo.gr/wp-content/uploads/2017/01/IMG_5388-400x400.jpg',
-  wantToMatch: false
+  wantToMatch: true
 },
 {
   gender: 'Any',
@@ -124,6 +124,6 @@ export const offerRoom = [{
   location: 'Amsterdam',
   description: "I'm loking for a roommate. Fully furnished.",
   image: 'https://ydom43.ru/uploads/room/400x400/room_3_5b040401c7fd9.jpeg',
-  wantToMatch: true
+  wantToMatch: false
 },
 ]
