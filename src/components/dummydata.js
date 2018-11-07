@@ -71,6 +71,8 @@ export const offerRoom = [{
   smoking: 'Yes',
   price: '400-500 EUR',
   location: 'Amsterdam',
+  description: "I'm loking for a roommate. In apartment has a fridge, washing machine and funny cat.",
+  image: 'http://lousescartoun.com/wp-content/uploads/2017/06/Camera-Jusfine-38-400x400-c-default.jpg'
 },
 {
   gender: 'Female',
@@ -79,6 +81,8 @@ export const offerRoom = [{
   smoking: 'No',
   price: '500-600 EUR',
   location: 'Amsterdam',
+  description: "I'm loking for a roommate. Bright, clean room on the outskirts of the Amsterdam.",
+  image:'https://sandbergwallpaper.com/wp-content/uploads//433-88_3-1-400x400.jpg'
 },
 {
   gender: 'male',
@@ -87,13 +91,28 @@ export const offerRoom = [{
   smoking: 'Yes',
   price: '700-800 EUR',
   location: 'Amsterdam',
+  description: "I'm loking for a roommate. Unfurnished but with a beautiful wiew ifrom the window",
+  image: 'https://multimedia.3m.com/mws/media/1216793P/3m-window-film.jpg'
+  
 },
 {
   gender: 'Female',
   startingDate: "2018-10-08",
   pets: 'No',
   smoking: 'No',
-  price: '400-500 EUR',
+  price: 'under 400 EUR',
   location: 'Amsterdam',
-}
+  description: "I'm loking for a roommate. Very cheap",
+  image: 'http://www.vincenzo.gr/wp-content/uploads/2017/01/IMG_5388-400x400.jpg'
+},
+{
+  gender: 'Any',
+  startingDate: "2018-11-08",
+  pets: 'Yes',
+  smoking: 'Yes',
+  price: '600-700 EUR',
+  location: 'Amsterdam',
+  description: "I'm loking for a roommate. Fully furnished.",
+  image: 'https://ydom43.ru/uploads/room/400x400/room_3_5b040401c7fd9.jpeg'
+},
 ]
