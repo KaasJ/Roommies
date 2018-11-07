@@ -7,7 +7,7 @@ class MatchPageForOwner extends React.Component {
 
   findMatch = (owner, tenants) => tenants.filter(tenant => {
     return Object.keys(owner).every(k => {
-      if (k === 'description') {
+      if (k === 'description' || k === 'image') {
         return true;
       }
       return owner[k].toLowerCase() === tenant[k].toLowerCase()
@@ -48,10 +48,12 @@ class MatchPageForOwner extends React.Component {
         <h1>Found {matches.length} matches</h1>
         <ul>
           <li>{mate.description}</li>
+          <li><img src={mate.image} alt='owner'/></li>
           {/* {matches.map((m, i) => <li key={i}>{m.description}</li>)} */}
         </ul>
-        <button onClick={this.rotate}>Next</button>
         <button onClick={this.rotateback}>Previous</button>
+        <button onClick={this.rotate}>Next</button>
+        
 
       </div>
     )
