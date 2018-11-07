@@ -1,10 +1,10 @@
 import * as React from 'react'
 import {connect} from 'react-redux';
 import {addTenant} from '../actions/addTenant'
-import TenantPreferences2 from './TenantPreferences2'
+import TenantPres from './TenantPres'
 import { withRouter} from 'react-router-dom'
 
-class LookingForRoomContainer extends React.Component {
+class TenantContainer extends React.Component {
 
   state = {};
 
@@ -20,22 +20,18 @@ class LookingForRoomContainer extends React.Component {
   handleSubmit = (event) => {
       event.preventDefault();
       this.props.addTenant(this.state);
-      setTimeout(() => this.props.setfilteredarray(), 2000)
-      
-      
-      
-      
+      setTimeout(() => this.props.setfilteredarray(), 2000)  
 }
 
   render() {
     
     
     return(
-      <TenantPreferences2 inputchange={this.handleInputChange} handlesubmit={this.handleSubmit} />
+      <TenantPres inputchange={this.handleInputChange} handlesubmit={this.handleSubmit} />
     )
   }
 
 }
 
 
-export default connect(null, {addTenant})(withRouter(LookingForRoomContainer)) 
+export default connect(null, {addTenant})(withRouter(TenantContainer))

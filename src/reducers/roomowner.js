@@ -7,7 +7,6 @@ const roomOwner = (state = initialState, action = {}) => {
   switch (action.type) {
   case ADD_OWNER:
     return [
-      ...state,
       action.payload
     ];
   default:
