@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import TenantContainer from './TenantContainer';
 import { offerRoom } from './dummydata'
 import { Link} from 'react-router-dom'
-
+import { addMatchTenant} from '../actions/addMatchTenant'
+import { withRouter } from 'react-router'
 
 
 class TenantMatchPage extends React.Component {
@@ -74,7 +75,9 @@ class TenantMatchPage extends React.Component {
 
   likeButton = () => {
     if (this.state.arrayDisplayed[this.state.indexItemDisplayed]['wantToMatch']) {
-      this.props.history.push('/matchowner')
+      console.log(this.state.arrayDisplayed[this.state.indexItemDisplayed])
+      this.props.addMatchTenant(this.state.arrayDisplayed[this.state.indexItemDisplayed])
+      setTimeout(() => this.props.history.push('/matchtenant'),1500)
     } else {
       if (this.state.indexItemDisplayed !== this.state.arrayDisplayed.length - 1) {
         const newArray = this.state.arrayDisplayed.filter((a, index) => index !== this.state.indexItemDisplayed)
@@ -126,4 +129,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(TenantMatchPage)
+export default connect(mapStateToProps, { addMatchTenant })(withRouter(TenantMatchPage))

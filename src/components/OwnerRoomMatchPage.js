@@ -4,6 +4,7 @@ import { lookingRoom } from './dummydata';
 import OwnerRoomContainer from './OwnerRoomContainer';
 import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
+import { addMatchOwner} from '../actions/addMatchOwner'
 
 
 
@@ -75,7 +76,9 @@ class OwnerRoomMatchPage extends React.Component {
 
   likeButton = () => {
     if (this.state.arrayDisplayed[this.state.indexItemDisplayed]['wantToMatch']) {
-      this.props.history.push('/matchowner')
+      console.log(this.state.arrayDisplayed[this.state.indexItemDisplayed])
+      this.props.addMatchOwner(this.state.arrayDisplayed[this.state.indexItemDisplayed])
+      setTimeout(() => this.props.history.push('/matchowner'),1500)
     } else {
       if (this.state.indexItemDisplayed !== this.state.arrayDisplayed.length - 1) {
         const newArray = this.state.arrayDisplayed.filter((a, index) => index !== this.state.indexItemDisplayed)
@@ -129,4 +132,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(withRouter(OwnerRoomMatchPage))
+export default connect(mapStateToProps, { addMatchOwner })(withRouter(OwnerRoomMatchPage))

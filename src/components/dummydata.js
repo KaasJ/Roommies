@@ -40,7 +40,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Sveta. I'm 23 years old. I am looking for a room. I have a fluffy cat, that constantly sheeds",
   image: 'http://www.popstaronline.com/wp-content/uploads/2018/09/Kristen-Bell-Thumbnail-400x400.jpg',
-  wantToMatch: false
+  wantToMatch: true
 },
 {
   gender: 'Male',
@@ -51,7 +51,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Viktor. I am 37 years old. I'm looking for a room. 'Sex, drugs and rock & roll' - it's about me",
   image: 'http://saranossaterra.com.br/content/uploads/2015/12/brad-pitt_416x416-400x400.jpg',
-  wantToMatch: false
+  wantToMatch: true
 },
 {
   gender: 'Female',
@@ -62,7 +62,7 @@ export const lookingRoom = [{
   location: 'Amsterdam',
   description: "Hi, my name is Vika. I'm 37 years old. I'm looking for a room. I'd like reeding, cooking and knitting. I have alergy by cats.",
   image: 'https://www.thisblogrules.com/wp-content/uploads/2015/01/081308_adams_400x400.jpg',
-  wantToMatch: false
+  wantToMatch: true
 }
 ]
 
