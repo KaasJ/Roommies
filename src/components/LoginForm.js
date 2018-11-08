@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../styles/LoginForm.css';
-import foto2 from '../images/Logo - small.png';
+import foto2 from '../images/Logo - Roomies big.png';
 import foto1 from '../images/Connect.png';
 
 export default function LoginForm (props) {

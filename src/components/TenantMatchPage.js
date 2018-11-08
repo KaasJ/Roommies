@@ -5,6 +5,10 @@ import { offerRoom } from './dummydata'
 import { Link } from 'react-router-dom'
 import { addMatchTenant } from '../actions/addMatchTenant'
 import { withRouter } from 'react-router'
+import like from '../images/like.png'
+import deletebutton from '../images/delete.png'
+import next from '../images/next.png'
+import returnbutton from '../images/return.png'
 
 
 class TenantMatchPage extends React.Component {
@@ -126,10 +130,10 @@ class TenantMatchPage extends React.Component {
               <p>Location: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['location']}</p>
               <p>Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p>
             </div>}
-            <button onClick={this.previousButton}>Previous</button>
-            <button onClick={this.deleteButton}>Delete</button>
-            <button onClick={this.likeButton}>Like</button>
-            <button onClick={this.nextButton}>Next</button></div> : <p>Sorry, we couldn't find any matching results!</p>}
+            <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
+          <img alt='delete' src={deletebutton} onClick={this.deleteButton}></img>
+          <img alt='like' src={like} onClick={this.likeButton}></img>
+          <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
           <Link to='/'><button>Back</button></Link>
         </div>}
       </div>

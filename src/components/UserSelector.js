@@ -1,24 +1,43 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/UserSelector.css'
-import foto1 from '../images/Connect.png'
-import foto2 from '../images/Logo - small.png'
+import connect from '../images/Connect.png'
+import logo from '../images/Logo - Roomies big.png'
 
 
 
-export default function UserSelector() {
+export default class UserSelector extends React.Component {
+
+  state = {
+    showMenu:false
+  }
+
+  menuHandler = () => {
+    this.setState({
+      showMenu:!this.state.showMenu
+    })
+  }
+
+  render() {
   return (<div className="body">
     <header>
       <div className="title">
         {/* <h1 className="name">ROOMMIES</h1> */}
-        <img src={foto2} alt="icons" className="logo" />
-        <Link to={'/login/'}><img src="https://img.icons8.com/ios/1600/menu.png" alt="buttommenu" className="bar" /></Link>
-      </div>
+        <Link to={'/'}><img src={logo} alt="icons" className="logo" /></Link>
+        <img src="https://img.icons8.com/ios/1600/menu.png" alt="buttommenu" className="bar" onClick={this.menuHandler} />
+        </div>
+        {this.state.showMenu && <div><ul><Link to={'/profile'}>
+        <li>Profile</li></Link>
+        <li>Matches</li>
+        <li>Messages</li>
+        <li>Notifications</li>
+        </ul></div>
+      }
     </header>
 
     <div className="background">
       <div className='login'>
-        <button className='button3'>Log in</button>
+        <Link to={'/login'}><button className='button3'>Log in</button></Link>
         <button className='button4'>Sign up</button>
       </div>
       <div className="menu">
@@ -35,11 +54,12 @@ export default function UserSelector() {
         {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
         <img src="https://img.icons8.com/ios/1600/twitter-circled.png" alt="icon2"/>
         <img src="https://img.icons8.com/ios/1600/instagram-new.png" alt="icon3"/> */}
-        <img src={foto1} alt="icons" className="icons" />
+        <img src={connect} alt="icons" className="icons" />
 
       </div>
       <h3>2018</h3>
     </footer>
   </div>
   )
+}
 }

@@ -17,7 +17,7 @@ class OwnerRoomMatchPage extends React.Component {
     showData: true,
     arrayDisplayed: [...lookingRoom],
     indexItemDisplayed: [...lookingRoom].length - 1,
-    showDetailedInfo: true
+    showDetailedInfo: false
   }
 
 
@@ -117,14 +117,14 @@ class OwnerRoomMatchPage extends React.Component {
         {this.state.showFilterButton && <button onClick={this.filterButton}>filter</button>}
         {this.state.showData && <div>  
           {this.state.arrayDisplayed.length ? <div><img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} onClick={this.showDetailedInfo} alt="123" ></img>
-          <p>Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p>
+          <p>Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p>
           {this.state.showDetailedInfo && <div>
             <p>Gender: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['gender']}</p>
             <p>Starting data: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['startingDate']}</p>
             <p>Pets: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['pets']}</p>
             <p>Smoking: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['smoking']}</p>
             <p>Location: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['location']}</p>
-            <p>Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p> 
+            <p>Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p> 
             </div>
           }
           <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
