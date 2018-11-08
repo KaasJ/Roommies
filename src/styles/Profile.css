@@ -1,0 +1,23 @@
+.profbody {
+width: 375px;
+height: 667px;
+border: 1px solid #1f1e1e;
+position: relative;
+}
+.profheader {
+  width: 378px;
+  height: 158.5px;
+  background-color: aqua;
+  position: absolute;
+}
+.profmain {
+  width: 378px;
+  height: 412px;
+  position: absolute;
+  background-color:olive;
+  top: 159px;
+}
+.profimg{
+  width: 100px;
+  height: 100px;
+}
