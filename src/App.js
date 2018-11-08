@@ -8,6 +8,8 @@ import OwnerRoomMatchPage from './components/OwnerRoomMatchPage';
 import TenantMatchPage from './components/TenantMatchPage';
 import OwnerYouMatched from './components/OwnerYouMatched';
 import TenantYouMatched from './components/TenantYouMatched';
+import LoginFormContainer from './components/LoginFormContainer'
+import Profile from './components/Profile'
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
       <Route exact path="/offeringaroommie" component={OwnerRoomMatchPage} />
       <Route exact path="/matchowner" component={OwnerYouMatched} />
       <Route exact path="/matchtenant" component={TenantYouMatched} /> 
+      <Route exact path="/login" component={LoginFormContainer}/>
+      <Route exact path="/profile" component={Profile}/>
       </div>
       </Provider>
     

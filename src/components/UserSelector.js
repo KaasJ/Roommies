@@ -10,9 +10,10 @@ export default function UserSelector() {
     <header>
       <div className="title">
         <h1 className="name">ROOMMIES</h1>
-        <img src="https://img.icons8.com/ios/1600/menu.png" alt="buttommenu" className="bar" />
+        <Link to={'/login/'}><img src="https://img.icons8.com/ios/1600/menu.png" alt="buttommenu" className="bar" /></Link>
       </div>
     </header>
+    
     <div className="background">
       <div className="menu">
         <h1 className="greeting">Find your perfect match!</h1>
