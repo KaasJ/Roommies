@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/UserSelector.css'
 import foto1 from '../images/Connect.png'
+import foto2 from '../images/Logo - small.png'
 
 
 
@@ -9,14 +10,19 @@ export default function UserSelector() {
   return (<div className="body">
     <header>
       <div className="title">
-        <h1 className="name">ROOMMIES</h1>
+        {/* <h1 className="name">ROOMMIES</h1> */}
+        <img src={foto2} alt="icons" className="logo" />
         <Link to={'/login/'}><img src="https://img.icons8.com/ios/1600/menu.png" alt="buttommenu" className="bar" /></Link>
       </div>
     </header>
-    
+
     <div className="background">
+      <div className='login'>
+        <button className='button3'>Log in</button>
+        <button className='button4'>Sign up</button>
+      </div>
       <div className="menu">
-        <h1 className="greeting">Find your perfect match!</h1>
+        <h5 className="greeting">Find your perfect match!</h5>
         <div className="buttons">
           <div><Link to={`/lookingforaroommie/`}> <button className="button1"> I need a room! </button></Link></div>
           <div><Link to={`/offeringaroommie/`}> <button className="button2">I need a roomie!</button></Link></div>

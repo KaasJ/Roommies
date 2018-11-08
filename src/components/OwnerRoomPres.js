@@ -42,10 +42,6 @@ export default function OwnerRoomPres (props) {
             <input type='radio' name='pets' value='Yes' id='petsYes' onChange={props.inputchange}/><label htmlFor='petsYes'>Yes</label>&nbsp;
             <input type='radio' name='pets' value='No' id='petsNo' onChange={props.inputchange}/><label htmlFor='petsNo'>No</label>&nbsp;
           </li>
-          <li>Description:</li>
-          <li>
-            <textarea id='text' name='description' onChange={props.inputchange}></textarea>
-          </li>
         </ul> 
         <button type='submit' >Submit</button>
       </form>

@@ -2,7 +2,7 @@ import { ADD_MATCH_TENANT } from '../actions/addMatchTenant';
 
 const initialState = [];
 
-const addMatchTenant = (state = initialState, action = {}) => {
+const matchTenant = (state = initialState, action = {}) => {
   switch (action.type) {
   case ADD_MATCH_TENANT:
     return [
@@ -13,4 +13,4 @@ const addMatchTenant = (state = initialState, action = {}) => {
   }
 }
 
-export default addMatchTenant;
+export default matchTenant;

@@ -5,8 +5,10 @@ import OwnerRoomContainer from './OwnerRoomContainer';
 import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
 import { addMatchOwner} from '../actions/addMatchOwner'
-
-
+import like from '../images/like.png'
+import deletebutton from '../images/delete.png'
+import next from '../images/next.png'
+import returnbutton from '../images/return.png'
 
 class OwnerRoomMatchPage extends React.Component {
   state = {
@@ -14,7 +16,8 @@ class OwnerRoomMatchPage extends React.Component {
     showFilterButton: true,
     showData: true,
     arrayDisplayed: [...lookingRoom],
-    indexItemDisplayed: [...lookingRoom].length - 1
+    indexItemDisplayed: [...lookingRoom].length - 1,
+    showDetailedInfo: true
   }
 
 
@@ -76,7 +79,6 @@ class OwnerRoomMatchPage extends React.Component {
 
   likeButton = () => {
     if (this.state.arrayDisplayed[this.state.indexItemDisplayed]['wantToMatch']) {
-      console.log(this.state.arrayDisplayed[this.state.indexItemDisplayed])
       this.props.addMatchOwner(this.state.arrayDisplayed[this.state.indexItemDisplayed])
       setTimeout(() => this.props.history.push('/matchowner'),1500)
     } else {
@@ -97,26 +99,38 @@ class OwnerRoomMatchPage extends React.Component {
       this.setState({
         "arrayDisplayed": []
       })
-      
     }
   }
   }
 
+  showDetailedInfo = () => {
+    this.setState({
+      "showDetailedInfo": !this.state.showDetailedInfo
+    })
+  }
+
   render() {
-
-
     return (
       <div>
         <h1>We found {this.state.arrayDisplayed.length} roommies for you!</h1>
         {this.state.showFilter && <OwnerRoomContainer setfilteredarray={this.setFilteredArray} />}
         {this.state.showFilterButton && <button onClick={this.filterButton}>filter</button>}
         {this.state.showData && <div>  
-          {this.state.arrayDisplayed.length ? <div><img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} alt="123"></img>
-          <p>{this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p> 
-          <button onClick={this.previousButton}>Previous</button>
-          <button onClick={this.deleteButton}>Delete</button>
-          <button onClick={this.likeButton}>Like</button>
-          <button onClick={this.nextButton}>Next</button></div> : <p>Sorry, we couldn't find any matching results!</p>}
+          {this.state.arrayDisplayed.length ? <div><img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} onClick={this.showDetailedInfo} alt="123" ></img>
+          <p>Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p>
+          {this.state.showDetailedInfo && <div>
+            <p>Gender: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['gender']}</p>
+            <p>Starting data: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['startingDate']}</p>
+            <p>Pets: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['pets']}</p>
+            <p>Smoking: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['smoking']}</p>
+            <p>Location: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['location']}</p>
+            <p>Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p> 
+            </div>
+          }
+          <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
+          <img alt='delete' src={deletebutton} onClick={this.deleteButton}></img>
+          <img alt='like' src={like} onClick={this.likeButton}></img>
+          <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
           <Link to='/'><button>Back</button></Link>
         </div>}
       </div>
