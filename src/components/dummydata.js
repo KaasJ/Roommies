@@ -1,18 +1,4 @@
-export const lookingRoom = [{
-  gender: 'Male',
-  startingDate: "2018-11-08",
-  pets: 'Yes',
-  smoking: 'Yes',
-  price: '400-500 EUR',
-  location: 'Amsterdam',
-  description: "Hi, my name is Slava. I'm 32 years old. I'm looking for a room. I'd like sports and active lifestyle.",
-  image: 'http://www.popstaronline.com/wp-content/uploads/2018/07/Game-of-Thrones-4-400x400.jpg',
-  login: 'Slava',
-  password: '1234',
-  mobile: "+79271334562",
-  email: "slavakingofthenorth@gmail.ru",
-  wantToMatch: true
-},
+export const lookingRoom = [
 {
   gender: 'Male',
   startingDate: "2018-11-08",
