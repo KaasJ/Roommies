@@ -10,7 +10,7 @@ import deletebutton from '../images/delete.png'
 import next from '../images/next.png'
 import returnbutton from '../images/return.png'
 import logo from '../images/Logo - Roomies big2.png'
-import connectbutton from '../images/Connect.png'
+//import connectbutton from '../images/Connect.png'
 import '../styles/TenantMatchPage.css'
 import filterbutton from '../images/Filter.png'
 
@@ -143,47 +143,46 @@ class TenantMatchPage extends React.Component {
         }
       </header>
 
-      <div className="box">
-        <div className='login'>
-          <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link>
-          <button className='loginbutton4'>Sign up</button>
-          <div className="middlesection">
-            <p>We found {this.state.arrayDisplayed.length} roommies for you!</p>
-            {this.state.showFilterButton && <img className="filter" src={filterbutton} alt="filterbutton" onClick={this.filterButton}></img>}
-            {this.state.showFilter && <TenantContainer setfilteredarray={this.setFilteredArray} />}
-            {this.state.showData && <div>
-              {this.state.arrayDisplayed.length ? <div><img className="mainPhoto" src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} alt="123" onClick={this.showDetailedInfo}></img>
-                <p>Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p>
-                {this.state.showDetailedInfo && <div className="extraInfo">
-                  <p>Gender: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['gender']}<br></br>
+      <div className="box2">
+        {/* <div className='login'> */}
+        {/* <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link> */}
+        {/* <button className='loginbutton4'>Sign up</button> */}
+        <div className="middlesection">
+          <p>We found {this.state.arrayDisplayed.length} roommies for you!</p>
+          {this.state.showFilterButton && <img className="filter" src={filterbutton} alt="filterbutton" onClick={this.filterButton}></img>}
+          {this.state.showFilter && <TenantContainer setfilteredarray={this.setFilteredArray} />}
+          {this.state.showData && <div>
+            {this.state.arrayDisplayed.length ? <div><img className="mainPhoto" src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} alt="123" onClick={this.showDetailedInfo}></img>
+              <p>Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p>
+              {this.state.showDetailedInfo && <div className="extraInfo">
+                <p>Gender: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['gender']}<br></br>
                     Starting data: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['startingDate']}<br></br>
                     Pets: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['pets']}<br></br>
                     Smoking: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['smoking']}<br></br>
                     Location: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['location']}<br></br>
                     Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p>
-                </div>}
-                <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
-                <img alt='delete' src={deletebutton} onClick={this.deleteButton}></img>
-                <img alt='like' src={like} onClick={this.likeButton}></img>
-                <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
-            </div>}
-          </div>
+              </div>}
+              <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
+              <img alt='delete' src={deletebutton} onClick={this.deleteButton}></img>
+              <img alt='like' src={like} onClick={this.likeButton}></img>
+              <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
+          </div>}
         </div>
+        {/* </div> */}
       </div>
     
     
 
-      <footer className="footer">
+      {/* <footer className="footer">
         <h2>Connect with us</h2>
-        <div className="contact">
-          {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
+        <div className="contact"> */}
+      {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
         <img src="https://img.icons8.com/ios/1600/twitter-circled.png" alt="icon2"/>
         <img src="https://img.icons8.com/ios/1600/instagram-new.png" alt="icon3"/> */}
-          <img src={connectbutton} alt="icons" className="icons" />
-
+      {/* <img src={connectbutton} alt="icons" className="icons" />
         </div>
         <h3>2018</h3>
-      </footer>
+      </footer> */}
     </div>
     )
   }

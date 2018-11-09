@@ -10,36 +10,39 @@ const prices = ['under 400 EUR', '400-500 EUR', '500-600 EUR', '600-700 EUR', '7
 export default function TenantPres (props) {
   
   return (
+  
     <div className="filterform">
-      <p>Fill your preferences</p>
+      <div className='filterspase' >
+        <p className='filtername'>FILTERS</p>
+      </div>
       <form className="form"onSubmit={props.handlesubmit}>
         <ul className="list">
           <li className="listItem">Location:&nbsp;
             <select name='location' onChange={props.inputchange}>
-              <option>pick your location</option>
+              <option className='dropmenufilter'>pick your location</option>
               {locations.map((location, i) => <option key={i}>{location}</option>)}
             </select>
           </li>
-          <li>Price:&nbsp;
+          <li className="listItem">Price:&nbsp;
             <select name='price' onChange={props.inputchange}>
               <option>pick your price</option>
               {prices.map((price, j) => <option key={j}>{price}</option>)}
             </select>
           </li>
-          <li>Starting date:&nbsp;
+          <li className="listItem">Starting date:&nbsp;
             <input type='date' name='startingDate' onChange={props.inputchange} key='date'></input>
           </li>
           
-          <li> Gender:
+          <li className="listItem"> Gender:
             <input type='radio' name='gender' value='Female' id='female' onChange={props.inputchange}/><label htmlFor='female'>Female</label>&nbsp;
             <input type='radio' name='gender' value='Male' id='male' onChange={props.inputchange}/><label htmlFor='male'>Male</label>&nbsp;
             <input type='radio' name='gender' value='Any' id='any' onChange={props.inputchange}/><label htmlFor='any'>Any</label>&nbsp;
           </li>
-          <li>Smoking:
+          <li className="listItem">Smoking:
             <input type='radio' name='smoking' value='Yes' id='smokingYes' onChange={props.inputchange}/><label htmlFor='smokingYes'>Yes</label>&nbsp;
             <input type='radio' name='smoking' value='No' id='smokingNo' onChange={props.inputchange}/><label htmlFor='smokingNo'>No</label>&nbsp;
           </li>
-          <li>Pets:
+          <li className="listItem">Pets:
             <input type='radio' name='pets' value='Yes' id='petsYes' onChange={props.inputchange}/><label htmlFor='petsYes'>Yes</label>&nbsp;
             <input type='radio' name='pets' value='No' id='petsNo' onChange={props.inputchange}/><label htmlFor='petsNo'>No</label>&nbsp;
           </li>

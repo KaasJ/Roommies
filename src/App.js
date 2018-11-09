@@ -8,22 +8,22 @@ import OwnerRoomMatchPage from './components/OwnerRoomMatchPage';
 import TenantMatchPage from './components/TenantMatchPage';
 import OwnerYouMatched from './components/OwnerYouMatched';
 import TenantYouMatched from './components/TenantYouMatched';
-import LoginFormContainer from './components/LoginFormContainer'
-import Profile from './components/Profile'
+import LoginFormContainer from './components/LoginFormContainer';
+import Profile from './components/Profile';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-      <div className="Roommie-app">
-      <Route exact path="/lookingforaroommie" component={TenantMatchPage} /> 
-      <Route exact path="/" component={UserSelectorContainer} />
-      <Route exact path="/offeringaroommie" component={OwnerRoomMatchPage} />
-      <Route exact path="/matchowner" component={OwnerYouMatched} />
-      <Route exact path="/matchtenant" component={TenantYouMatched} /> 
-      <Route exact path="/login" component={LoginFormContainer}/>
-      <Route exact path="/profile" component={Profile}/>
-      </div>
+        <div className="Roommie-app">
+          <Route exact path="/lookingforaroommie" component={TenantMatchPage} /> 
+          <Route exact path="/" component={UserSelectorContainer} />
+          <Route exact path="/offeringaroommie" component={OwnerRoomMatchPage} />
+          <Route exact path="/matchowner" component={OwnerYouMatched} />
+          <Route exact path="/matchtenant" component={TenantYouMatched} /> 
+          <Route exact path="/login" component={LoginFormContainer}/>
+          <Route exact path="/profile" component={Profile}/>
+        </div>
       </Provider>
     
     );
