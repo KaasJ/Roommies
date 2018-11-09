@@ -9,6 +9,11 @@ import like from '../images/like.png'
 import deletebutton from '../images/delete.png'
 import next from '../images/next.png'
 import returnbutton from '../images/return.png'
+import logo from '../images/Logo - Roomies big2.png'
+import connectbutton from '../images/Connect.png'
+import '../styles/OwnerRoomMatchPage.css'
+import filterbutton from '../images/Filter.png'
+
 
 class OwnerRoomMatchPage extends React.Component {
   state = {
@@ -17,9 +22,16 @@ class OwnerRoomMatchPage extends React.Component {
     showData: true,
     arrayDisplayed: [...lookingRoom],
     indexItemDisplayed: [...lookingRoom].length - 1,
-    showDetailedInfo: false
+    showDetailedInfo: false,
+    showMenu:false,
   }
 
+
+  menuHandler = () => {
+    this.setState({
+      showMenu:!this.state.showMenu
+    })
+  }
 
   filterButton = () => {
     this.setState({
@@ -111,29 +123,65 @@ class OwnerRoomMatchPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>We found {this.state.arrayDisplayed.length} roommies for you!</h1>
+      <div className="body">
+      <header classname="header">
+        <div className="logoandhamburger">
+          <Link to={'/'}><img src={logo} alt="icons" className="logo" /></Link>
+          <img src="https://img.icons8.com/ios/1600/menu.png" alt="bottommenu" className="hamburger" onClick={this.menuHandler} />
+        </div>
+
+        {this.state.showMenu && <div className="menu-dropdown">
+          <ul className="menu-dropdown-buttons">
+            <Link to={'/profile'}><li>Profile</li></Link>
+            <li>Matches</li>
+            <li>Messages</li>
+            <li>Notifications</li>
+          </ul></div>
+        }
+      </header>
+
+      <div className="box">
+        <div className='login'>
+          <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link>
+          <button className='loginbutton4'>Sign up</button>
+          <div className="middlesection">
+        <p>We found {this.state.arrayDisplayed.length} roommies for you!</p>
+        {this.state.showFilterButton && <img className="filter" src={filterbutton} alt="filterbutton" onClick={this.filterButton}></img>}
         {this.state.showFilter && <OwnerRoomContainer setfilteredarray={this.setFilteredArray} />}
-        {this.state.showFilterButton && <button onClick={this.filterButton}>filter</button>}
-        {this.state.showData && <div>  
-          {this.state.arrayDisplayed.length ? <div><img src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} onClick={this.showDetailedInfo} alt="123" ></img>
-          <p>Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p>
-          {this.state.showDetailedInfo && <div>
-            <p>Gender: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['gender']}</p>
-            <p>Starting data: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['startingDate']}</p>
-            <p>Pets: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['pets']}</p>
-            <p>Smoking: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['smoking']}</p>
-            <p>Location: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['location']}</p>
-            <p>Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p> 
-            </div>
-          }
-          <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
-          <img alt='delete' src={deletebutton} onClick={this.deleteButton}></img>
-          <img alt='like' src={like} onClick={this.likeButton}></img>
-          <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
-          <Link to='/'><button>Back</button></Link>
+        {this.state.showData && <div>
+          {this.state.arrayDisplayed.length ? <div><img className="mainPhoto" src={this.state.arrayDisplayed[this.state.indexItemDisplayed]['image']} alt="123" onClick={this.showDetailedInfo}></img>
+            <p>Description: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['description']}</p>
+            {this.state.showDetailedInfo && <div>
+              <p>Gender: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['gender']}<br></br>
+              Starting data: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['startingDate']}<br></br>
+              Pets: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['pets']}<br></br>
+              Smoking: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['smoking']}<br></br>
+              Location: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['location']}<br></br>
+              Price range: {this.state.arrayDisplayed[this.state.indexItemDisplayed]['price']}</p>
+            </div>}
+            <img alt='return' src={returnbutton} onClick={this.previousButton}></img>
+            <img alt='delete' src={deletebutton} onClick={this.deleteButton}></img>
+            <img alt='like' src={like} onClick={this.likeButton}></img>
+            <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
         </div>}
       </div>
+        </div>
+      </div>
+    
+    
+
+      <footer className="footer">
+        <h2>Connect with us</h2>
+        <div className="contact">
+          {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
+        <img src="https://img.icons8.com/ios/1600/twitter-circled.png" alt="icon2"/>
+        <img src="https://img.icons8.com/ios/1600/instagram-new.png" alt="icon3"/> */}
+          <img src={connectbutton} alt="icons" className="icons" />
+
+        </div>
+        <h3>2018</h3>
+      </footer>
+    </div>
     )
   }
 }

@@ -5,8 +5,9 @@ import UserSelector from './UserSelector'
 export default class UserSelectorContainer extends React.Component {
 
   componentDidMount(){
-    document.title = "Roommies APP"
+    document.title = "Roommies App"
   }
+
 
   render() {
   return( 

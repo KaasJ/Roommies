@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
+
 
 class Profile extends React.Component {
   render() {
     if (this.props.state.users.length === 0) {
-      return (<h1>Forbidden!</h1>)
+      return (<div><h1>Forbidden!</h1><p> Please go to the login page<Link to={'/login'}><button>Login page</button> </Link></p></div>)
     }
 
     const user = this.props.state.users[0]
