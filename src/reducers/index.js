@@ -4,6 +4,8 @@ import roomOwner from './roomowner'
 import matchOwner from './matchowner'
 import matchTenant from './matchtenant'
 import users from './users'
+import addMatchTenantList from './addMatchTenantList'
+import addMatchOwnerList from './addMatchOwnerList'
 
 
 export default combineReducers({
@@ -11,5 +13,7 @@ export default combineReducers({
   roomOwner,
   matchOwner,
   matchTenant,
+  addMatchTenantList,
+  addMatchOwnerList,
   users,
 })

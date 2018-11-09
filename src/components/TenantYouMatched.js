@@ -49,34 +49,36 @@ render() {
     </ul></div>
   }
 </header>
-<div className="box">
+<div className="box10">
       <div className='login'>
-        <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link>
-        <button className='loginbutton4'>Sign up</button>
+        {/* <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link>
+        <button className='loginbutton4'>Sign up</button> */}
+        <p>You've got a match!</p>
       </div>
 
       <div className="matchsection">
-      <p>You've got a match!</p>
+      
       
       <img className="leftPhoto" src={personImage[Math.floor(Math.random()* 5)]} alt="imageMatcher"></img>
       <img className="rightPhoto" src={this.props.matched.matchTenant[0]['image']} alt="imageroom"></img>
+      </div>
       <div className="buttonsbottom">
       <button className="sendmessage"onClick={this.mailTo}>Send a Message</button>
       <Link to='/lookingforaroommie'><button className="keepsearching">Keep on Searching</button></Link></div>
-      </div>
+      
       </div>
 
-   <footer className="footer">
+   {/* <footer className="footer">
       <h2>Connect with us</h2>
-      <div className="contact">
+      <div className="contact"> */}
         {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
         <img src="https://img.icons8.com/ios/1600/twitter-circled.png" alt="icon2"/>
         <img src="https://img.icons8.com/ios/1600/instagram-new.png" alt="icon3"/> */}
-        <img src={connectbutton} alt="icons" className="icons" />
+        {/* <img src={connectbutton} alt="icons" className="icons" />
 
       </div>
       <h3>2018</h3>
-    </footer>
+    </footer> */}
   </div>
 
   )

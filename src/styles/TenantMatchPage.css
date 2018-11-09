@@ -1,104 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-.body {
-font-family: 'Source Sans Pro', sans-serif;
-display: flex;
-flex-direction: column;
-margin: 0px auto 0px;
-}
 
 
-.logoandhamburger {
-  height: 60px;
-  margin-bottom: 5px;
-  text-align: center;
-}
 
-.logo {
-  display:inline;
-  width: 150px;
-  height: 30px;
-  margin: 10px auto 10px; 
-}
-
-.hamburger {
-  width: 50px;
-  height: 50px;
-  display:inline-block;
-  float: right;
-  margin-left: auto;
-  margin-right: 0px;
-}
-
-.menu-dropdown {
-  display:block;
-}
-
-.menu-dropdown-buttons {
-  display:block;
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-  font-size: 20px;
-  margin: 0;  
-}
-
-
-.menu-dropdown-buttons li {
-color: black;
-border-style: outset;
-border-width: 1px;
-border-color: rgb(241, 241, 241);
-height: 50px;
-background-color: white;
-}
-
-
-.box {
+.box6 {
   height: 700px;
   margin-top: 0px;
   margin-bottom: 0px;
   display: block;
-  background-image: url("../images/Background image - homepage.png");
-  background-repeat: no-repeat;
-  background-size: 600px 600px;
-  background-position:center;
 }
 
-.login {
-  display:block;
-  height: 50px;
-  background-color:rgba(145, 242, 202, 0.8);
-}
-
-.loginbutton3 {
-  float:right;
-  height: 40px;
-  width: 100px;
-  margin-top: 5px;
-  font-size: 16px;
-  border-radius: 10px;
-  background-color:rgba(145, 242, 202, 0.2);
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.loginbutton4 {
-  float: right;
-  height: 40px;
-  width: 100px;
-  margin-top: 5px;
-  font-size: 16px;
-  border-radius: 10px;
-  background-color:rgba(145, 242, 202, 0.2);
-  font-family: 'Source Sans Pro', sans-serif;
-}
 
 
 .middlesection {
   margin: 0px auto;
   display: block;
   text-align:center;
-  padding:40px
+  padding:30px auto;
+  font-size: 15px;
 }
 
 .mainPhoto {
@@ -112,33 +31,4 @@ background-color: white;
   display:block;
   text-align: center;
 }
-
-
-.footer {
-  background-color:rgba(54, 55, 50, 0.1);
-  display: block;
-  position:fixed;
-  bottom:0;
-  width: 100%;
-  text-align: center;
-}
-
-h2 {
-  display:block;
-  font-size: 16px;
-  font-style: normal;
-  text-align: center;
-  color:rgba(54, 55, 50, 0.4);
-}
-
-h3 {
-  font-size: 13px;
-  display:block;
-  color:rgba(54, 55, 50, 0.4);
-}
-
-
-
-
-
 

@@ -10,7 +10,9 @@ export default function OwnerRoomPres (props) {
   
   return (
     <div className="filterform">
-    <p>Fill your preferences</p>
+    <div className='filterspase'>
+      <p>FILTERS</p>
+    </div>
     <form className="form"onSubmit={props.handlesubmit}>
       <ul className="list">
         <li className="listItem">Location:&nbsp;
@@ -43,7 +45,7 @@ export default function OwnerRoomPres (props) {
           <input type='radio' name='pets' value='No' id='petsNo' onChange={props.inputchange}/><label htmlFor='petsNo'>No</label>&nbsp;
         </li>
       </ul> 
-      <button className="submit" type='submit'>Submit</button> 
+      <button className="submit" type='submit'>APPLY FILTERS</button> 
  
     </form>
  

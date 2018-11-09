@@ -13,8 +13,7 @@ import logo from '../images/Logo - Roomies big2.png'
 import connectbutton from '../images/Connect.png'
 import '../styles/TenantMatchPage.css'
 import filterbutton from '../images/Filter.png'
-
-
+import { addMatchesTenant } from '../actions/addMatchesTenant'
 
 class TenantMatchPage extends React.Component {
 
@@ -93,6 +92,7 @@ class TenantMatchPage extends React.Component {
   likeButton = () => {
     if (this.state.arrayDisplayed[this.state.indexItemDisplayed]['wantToMatch']) {
       this.props.addMatchTenant(this.state.arrayDisplayed[this.state.indexItemDisplayed])
+      this.props.addMatchesTenant(this.state.arrayDisplayed[this.state.indexItemDisplayed])
       setTimeout(() => this.props.history.push('/matchtenant'), 1500)
     } else {
       if (this.state.indexItemDisplayed !== this.state.arrayDisplayed.length - 1) {
@@ -136,17 +136,17 @@ class TenantMatchPage extends React.Component {
         {this.state.showMenu && <div className="menu-dropdown">
           <ul className="menu-dropdown-buttons">
             <Link to={'/profile'}><li>Profile</li></Link>
-            <li>Matches</li>
+            <Link to={'/matchestenant'}><li>Matches</li></Link>
             <li>Messages</li>
             <li>Notifications</li>
           </ul></div>
         }
       </header>
 
-      <div className="box">
-        <div className='login'>
-          <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link>
-          <button className='loginbutton4'>Sign up</button>
+      <div className="box6">
+        {/* <div className='login'> */}
+          {/* <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link> */}
+          {/* <button className='loginbutton4'>Sign up</button> */}
           <div className="middlesection">
             <p>We found {this.state.arrayDisplayed.length} roommies for you!</p>
             {this.state.showFilterButton && <img className="filter" src={filterbutton} alt="filterbutton" onClick={this.filterButton}></img>}
@@ -168,22 +168,20 @@ class TenantMatchPage extends React.Component {
                 <img alt='next' src={next} onClick={this.nextButton}></img></div> : <p>Sorry, we couldn't find any matching results!</p>}
             </div>}
           </div>
-        </div>
+        {/* </div> */}
       </div>
-    
-    
 
-      <footer className="footer">
+      {/* <footer className="footer">
         <h2>Connect with us</h2>
-        <div className="contact">
+        <div className="contact"> */}
           {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
         <img src="https://img.icons8.com/ios/1600/twitter-circled.png" alt="icon2"/>
         <img src="https://img.icons8.com/ios/1600/instagram-new.png" alt="icon3"/> */}
-          <img src={connectbutton} alt="icons" className="icons" />
+          {/* <img src={connectbutton} alt="icons" className="icons" />
 
         </div>
         <h3>2018</h3>
-      </footer>
+      </footer> */}
     </div>
     )
   }
@@ -197,4 +195,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { addMatchTenant })(withRouter(TenantMatchPage))
+export default connect(mapStateToProps, { addMatchTenant, addMatchesTenant })(withRouter(TenantMatchPage))

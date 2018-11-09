@@ -1,35 +1,79 @@
 import * as React from 'react';
 import '../styles/LoginForm.css';
-import foto2 from '../images/Logo - Roomies big.png';
-import foto1 from '../images/Connect.png';
+import foto2 from '../images/Logo - Roomies big2.png';
+import connectbutton from '../images/Connect.png'
+import { Link } from 'react-router-dom'
+import logo from '../images/Logo - Roomies big2.png'
 
-export default function LoginForm (props) {
-  return (
-    <div className='formbody'>
-      <header className='formheader'>
-        <img src="https://img.icons8.com/ios/1600/menu.png" alt="buttommenu" className="bar" />
-        <img src={foto2} alt="icons" className="logo" />
+
+export default class LoginForm extends React.Component {
+
+
+  state = {
+    showMenu:false,
+  }
+
+  menuHandler = () => {
+    this.setState({
+      showMenu:!this.state.showMenu
+    })
+  }
+
+  render() {
+    return (<div className="body">
+      <header classname="header">
+        <div className="logoandhamburger">
+          <Link to={'/'}><img src={logo} alt="icons" className="logo" /></Link>
+          <img src="https://img.icons8.com/ios/1600/menu.png" alt="bottommenu" className="hamburger" onClick={this.menuHandler} />
+        </div>
+
+        {this.state.showMenu && <div className="menu-dropdown">
+          <ul className="menu-dropdown-buttons">
+            <Link to={'/profile'}><li>Profile</li></Link>
+            <li>Matches</li>
+            <li>Messages</li>
+            <li>Notifications</li>
+          </ul></div>
+        }
       </header>
-      <div className="background">
-        <form onSubmit={props.handlesubmit}>
-          <div className='titleform'><h1>Welcome back!</h1></div>
-          <div className="menuform">
-            <ul>
-              <input type='text' name='login' key='text' onChange={props.inputchange} className='input1' placeholder="Username"></input>
-              <input type='password' name='password' key='number' onChange={props.inputchange} className='input2' placeholder="Password"></input>
-              <button type='submit' className="buttonlogin">Log in</button>
-            </ul>
+
+      <div className="box">
+        <div className='login'>
+          <Link to={'/login'}><button className='loginbutton3'>Log in</button></Link>
+          <button className='loginbutton4'>Sign up</button>
+        </div>
+
+        <div className='formbody'>
+    
+          <div>
+            <form onSubmit={this.props.handlesubmit}>
+              <div><h1>Welcome back!</h1></div>
+              <div >
+                <ul>
+                <div className='menuform'>
+                  <input className='username' type='text' name='login' key='text' onChange={this.props.inputchange} className='input1' placeholder="Username"></input>
+                  <input className='password' type='password' name='password' key='number' onChange={this.props.inputchange} className='input2' placeholder="Password"></input>
+                  <button type='submit' className="buttonlogin">Log in</button>
+                  </div>
+                </ul>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
+      
       </div>
       <footer className="footer">
-        <h2>Connect whit us</h2>
-        <div className="contact">
-          <img src={foto1} alt="icons" className="icons" />
-        </div>
-        <h3>2018</h3>
-      </footer>
+          <h2>Connect with us</h2>
+          <div className="contact">
+            {/* <img src="https://img.icons8.com/ios/1600/facebook.png" alt="icon1"/>
+        <img src="https://img.icons8.com/ios/1600/twitter-circled.png" alt="icon2"/>
+        <img src="https://img.icons8.com/ios/1600/instagram-new.png" alt="icon3"/> */}
+            <img src={connectbutton} alt="icons" className="icons" />
+
+          </div>
+          <h3>2018</h3>
+        </footer>
     </div>
-    
-  )
+    )
+  }
 }
