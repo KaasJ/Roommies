@@ -1,6 +1,8 @@
-Codaisseur assignment week 4
+Codaisseur Group assignment week 4
 
-Assignment: build a Tinder like app.
+Project assignment: build a Tinder like app.
+
+Build by Natalia Khabibullina and Jorrit Stein
 
 Project duration: 4 days.
 
