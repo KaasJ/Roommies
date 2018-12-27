@@ -1,10 +1,10 @@
 Codaisseur assignment week 4
 
-Tinder like app.
+Assignment: build a Tinder like app.
+
+Project duration: 4 days.
 
 React, Javascript, JSX, CSS, REDUX
-
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
